@@ -49,7 +49,7 @@ aaa-lab-freeradius-wireguard/
 │   ├── screenshots/
 │   │   ├── ss_1813_listener.png
 │   │   └── accounting_start_stop.png
-│   └── README.txt
+│   └── README.md
 │
 ├── vpn01/                     → WireGuard VPN server configs & screenshots
 │   ├── configs/
@@ -57,10 +57,10 @@ aaa-lab-freeradius-wireguard/
 │   ├── screenshots/
 │   │   ├── ss_vpn01_udp_port_51820.png
 │   │   └── ss_wg_service_status.png
-│   └── README.txt
+│   └── README.md
 │
 ├── LICENSE
-└── README.txt  ← This file
+└── README.md  ← This file
 ```
 ───────────────────────────────────────────────
 
