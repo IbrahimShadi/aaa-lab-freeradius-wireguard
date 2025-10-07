@@ -1,8 +1,11 @@
 AAA Lab — FreeRADIUS + WireGuard Integration
 
 ───────────────────────────────────────────────
+
 1️⃣ Project Overview
+
 ───────────────────────────────────────────────
+
 This repository documents a functional lab environment integrating FreeRADIUS and WireGuard 
 to demonstrate AAA principles (Authentication, Authorization, Accounting) in a VPN context.
 
@@ -14,20 +17,29 @@ The lab includes two virtual nodes:
 Together they implement a secure, end-to-end AAA architecture for VPN users.
 
 ───────────────────────────────────────────────
+
 2️⃣ Architecture Summary
+
 ───────────────────────────────────────────────
+
+
 ┌──────────────────────────┐       UDP/1812–1813       ┌──────────────────────────┐
 │        vpn01 (WG)        │ <──────────────────────>  │     aaa01 (RADIUS)       │
 │  WireGuard Server        │                           │  Authentication + Logging│
 │  User connects via VPN   │                           │  FreeRADIUS 3.0 Service  │
 └──────────────────────────┘                           └──────────────────────────┘
 
+
 Client authentication requests originate from vpn01 to aaa01 over RADIUS UDP ports.
 Accounting Start/Stop events are logged by aaa01 under /var/log/freeradius/radacct/.
 
+
 ───────────────────────────────────────────────
+
 3️⃣ Folder Structure
+
 ───────────────────────────────────────────────
+
 aaa-lab-freeradius-wireguard/
 ├── aaa01/                     → FreeRADIUS server configs & verification
 │   ├── configs/
@@ -50,8 +62,11 @@ aaa-lab-freeradius-wireguard/
 └── README.txt  ← This file
 
 ───────────────────────────────────────────────
+
 4️⃣ How to Use This Repository
+
 ───────────────────────────────────────────────
+
 1. Clone the repository:
    git clone https://github.com/<your-username>/aaa-lab-freeradius-wireguard.git
 
@@ -71,26 +86,34 @@ aaa-lab-freeradius-wireguard/
    - WireGuard Connectivity: `sudo ss -ulpn | grep 51820`
 
 ───────────────────────────────────────────────
+
 5️⃣ Results
+
 ───────────────────────────────────────────────
+
 ✅ Authentication via FreeRADIUS confirmed (`Access-Accept`)  
 ✅ Authorization managed via users file  
 ✅ Accounting Start/Stop entries recorded  
 ✅ WireGuard peer communication established  
 
 ───────────────────────────────────────────────
+
 6️⃣ Security Notes
+
 ───────────────────────────────────────────────
+
 - Do not commit real credentials or keys.
 - Use placeholders in public repositories.
 - Rotate secrets if they were exposed.
 - Keep `/etc/wireguard` and `/etc/freeradius` permissions strict (chmod 600).
 
 ───────────────────────────────────────────────
+
 7️⃣ Author & Acknowledgment
+
 ───────────────────────────────────────────────
+
 Author: Ibrahim Shadi   
 Date: October 2025  
 
 Part of the AAA Lab Project — FreeRADIUS + WireGuard Integration  
-Educational purpose only.
