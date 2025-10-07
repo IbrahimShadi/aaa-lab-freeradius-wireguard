@@ -39,7 +39,7 @@ Accounting Start/Stop events are logged by aaa01 under /var/log/freeradius/radac
 3️⃣ Folder Structure
 
 ───────────────────────────────────────────────
-
+```
 aaa-lab-freeradius-wireguard/
 ├── aaa01/                     → FreeRADIUS server configs & verification
 │   ├── configs/
@@ -60,7 +60,7 @@ aaa-lab-freeradius-wireguard/
 │
 ├── LICENSE
 └── README.txt  ← This file
-
+´´´
 ───────────────────────────────────────────────
 
 4️⃣ How to Use This Repository
