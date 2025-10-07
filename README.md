@@ -28,11 +28,11 @@ Together they implement a secure, end-to-end AAA architecture for VPN users.
 │  WireGuard Server        │                           │  Authentication + Logging│
 │  User connects via VPN   │                           │  FreeRADIUS 3.0 Service  │
 └──────────────────────────┘                           └──────────────────────────┘
-
+```
 
 Client authentication requests originate from vpn01 to aaa01 over RADIUS UDP ports.
 Accounting Start/Stop events are logged by aaa01 under /var/log/freeradius/radacct/.
-```
+
 
 ───────────────────────────────────────────────
 
