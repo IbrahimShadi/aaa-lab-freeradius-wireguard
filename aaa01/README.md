@@ -182,7 +182,7 @@ The `aaa01` FreeRADIUS server now fully demonstrates the AAA model in this lab.
 
 
 
-\*\*Author:\*\* Ahmed Shadi  
+\*\*Author:\*\* Ibrahim Shadi  
 
 \*\*Project:\*\* AAA Lab — FreeRADIUS + WireGuard  
 
