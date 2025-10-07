@@ -40,9 +40,9 @@ It validates VPN users, authorizes them for access, and logs their session start
 
 |------|----------|
 
-| `configs/clients.conf.example` | Defines authorized RADIUS clients (e.g., VPN server `vpn01`) and shared secrets. |
+| `configs/clients.conf.example` | Defines authorized RADIUS clients (e.g., VPN server `vpn01`) and shared secrets (sanitized). |
 
-| `configs/users.example` | Contains local user credentials for authentication (`testuser` / `testpass`). |
+| `configs/users.example` | Contains local user credentials for authentication (`testuser` / `examplepass`). |
 
 | `/etc/freeradius/3.0/radiusd.conf` | Main FreeRADIUS configuration (default settings). |
 
@@ -58,11 +58,11 @@ It validates VPN users, authorizes them for access, and logs their session start
 
 
 
-\*\*Local RADIUS test:\*\*
+\*\*Local RADIUS test (on `aaa01`):\*\*
 
 ```bash
-
-radtest testuser testpass 127.0.0.1 0 testing123
+#using placeholder <SHARED_SECRET> for the RADIUS client secret in examples
+radtest testuser testpass 127.0.0.1 0 <SHARED_SECRET>
 
 ```
 
@@ -82,7 +82,7 @@ Received Access-Accept Id ...
 
 ```bash
 
-radtest testuser testpass 10.10.10.10 0 testing123
+radtest testuser example 10.10.10.10 0 <SHARED_SECRET>
 
 ```
 
@@ -166,7 +166,7 @@ Acct-Status-Type = Stop
 
 
 
-✅ \*\*Authentication\*\* — `testuser/testpass` verified via RADIUS  
+✅ \*\*Authentication\*\* — `testuser/examplepass` verified via RADIUS  
 
 ✅ \*\*Authorization\*\* — via users file policies  
 
@@ -174,15 +174,13 @@ Acct-Status-Type = Stop
 
 
 
-The `aaa01` FreeRADIUS server now fully demonstrates the AAA model in this lab.
-
 
 
 ---
 
 
 
-\*\*Author:\*\* Ahmed Shadi  
+\*\*Author:\*\* Ibrahim Shadi  
 
 \*\*Project:\*\* AAA Lab — FreeRADIUS + WireGuard  
 
