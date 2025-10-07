@@ -68,20 +68,21 @@ aaa-lab-freeradius-wireguard/
 ───────────────────────────────────────────────
 
 1. Clone the repository:
-   git clone https://github.com/<your-username>/aaa-lab-freeradius-wireguard.git
-
-2. Review and copy the example configuration files:
+   ```
+    git clone https://github.com/IbrahimShadi/aaa-lab-freeradius-wireguard.git
+   ```
+3. Review and copy the example configuration files:
    • aaa01/configs/*.example → /etc/freeradius/3.0/
    • vpn01/configs/*.example → /etc/wireguard/
 
-3. Replace placeholder values (<SHARED_SECRET>, <REDACTED>, etc.) with real ones **on your host only.**
+4. Replace placeholder values (<SHARED_SECRET>, <REDACTED>, etc.) with real ones **on your host only.**
    
 
-4. Start both services:
-   - On aaa01:  sudo systemctl restart freeradius
-   - On vpn01:  sudo systemctl start wg-quick@wg0
+5. Start both services:
+   - On aaa01:  `sudo systemctl restart freeradius`
+   - On vpn01:  `sudo systemctl start wg-quick@wg0`
 
-5. Validate:
+6. Validate:
    - RADIUS Authentication: `radtest testuser examplepass 10.10.10.10 0 <SHARED_SECRET>`
    - WireGuard Connectivity: `sudo ss -ulpn | grep 51820`
 
