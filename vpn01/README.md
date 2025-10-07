@@ -8,6 +8,7 @@ This directory documents the VPN server (WireGuard) side of the AAA lab setup.
 1️⃣ Overview
 
 ───────────────────────────────────────────────
+
 The vpn01 node acts as the WireGuard VPN server. It provides secure connectivity 
 for remote clients (e.g., Windows clients) and integrates with the FreeRADIUS 
 server (aaa01) for authentication and accounting.
@@ -21,6 +22,7 @@ FreeRADIUS accounting logs (/var/log/freeradius/radacct/).
 2️⃣ Folder Structure
 
 ───────────────────────────────────────────────
+
 configs/
  ├── wg0.conf.example          → sanitized WireGuard server configuration
  ├── iptables.rules            → optional UDP/ICMP forwarding rules
@@ -38,6 +40,7 @@ screenshots/
 3️⃣ Configuration Instructions
 
 ───────────────────────────────────────────────
+
 • Copy the sanitized WireGuard config to the system path:
   sudo cp configs/wg0.conf.example /etc/wireguard/wg0.conf
 
@@ -56,6 +59,7 @@ screenshots/
 4️⃣ Service Control
 
 ───────────────────────────────────────────────
+
 • Start WireGuard:
   sudo systemctl start wg-quick@wg0
 
@@ -74,6 +78,7 @@ screenshots/
 5️⃣ Verification and Results
 
 ───────────────────────────────────────────────
+
 • WireGuard interface wg0 shows as active with a valid peer.
 • UDP port 51820 is open for IPv4/IPv6 connections.
 • Accounting logs on aaa01 confirmed Start/Stop records for “testuser”.
@@ -85,6 +90,7 @@ screenshots/
 6️⃣ Author & Notes
 
 ───────────────────────────────────────────────
+
 Author: Ibrahim Shadi  
 Date: October 2025  
 Part of the AAA Lab (FreeRADIUS + WireGuard Integration)  
