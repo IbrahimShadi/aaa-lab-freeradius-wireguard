@@ -12,6 +12,7 @@ to demonstrate AAA principles (Authentication, Authorization, Accounting) in a V
 The lab includes two virtual nodes:
 
 • aaa01 — FreeRADIUS server (10.10.10.10)
+
 • vpn01 — WireGuard VPN server (10.10.10.11)
 
 Together they implement a secure, end-to-end AAA architecture for VPN users.
