@@ -22,7 +22,7 @@ Together they implement a secure, end-to-end AAA architecture for VPN users.
 
 ───────────────────────────────────────────────
 
-
+```
 ┌──────────────────────────┐       UDP/1812–1813       ┌──────────────────────────┐
 │        vpn01 (WG)        │ <──────────────────────>  │     aaa01 (RADIUS)       │
 │  WireGuard Server        │                           │  Authentication + Logging│
@@ -32,7 +32,7 @@ Together they implement a secure, end-to-end AAA architecture for VPN users.
 
 Client authentication requests originate from vpn01 to aaa01 over RADIUS UDP ports.
 Accounting Start/Stop events are logged by aaa01 under /var/log/freeradius/radacct/.
-
+```
 
 ───────────────────────────────────────────────
 
@@ -60,7 +60,7 @@ aaa-lab-freeradius-wireguard/
 │
 ├── LICENSE
 └── README.txt  ← This file
-´´´
+```
 ───────────────────────────────────────────────
 
 4️⃣ How to Use This Repository
