@@ -181,7 +181,7 @@ DEFAULT	Hint == "CSLIP"
 DEFAULT	Hint == "SLIP"
 	Framed-Protocol = SLIP
 
-testuser Cleartext-Password := "examplepass" 
+testuser Cleartext-Password := "testpass" 
 
 
 
