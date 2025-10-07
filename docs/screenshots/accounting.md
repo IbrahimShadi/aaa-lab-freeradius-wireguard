@@ -18,3 +18,5 @@ In this phase, the goal was to verify that **FreeRADIUS correctly logs Accountin
 
 ```bash
 sudo ss -lunp | grep 1813
+Result: FreeRADIUS listening on UDP/1813
+(see Screenshot: ss_1813_listener.png)
