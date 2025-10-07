@@ -48,7 +48,7 @@
 #
 client vpn01 {
 	ipaddr = 10.10.10.11
-	secret = changeme
+	secret = <SHARED_SECRET>
 	shortname = vpn01
 }
 
@@ -140,7 +140,7 @@ client localhost {
 	#  The default secret below is only for testing, and should
 	#  not be used in any real environment.
 	#
-	secret = changeme
+	secret = <SHARED_SECRET>
 
 	#
 	#  The global configuration "security.require_message_authenticator"
@@ -324,18 +324,18 @@ client localhost {
 # IPv6 Client
 client localhost_ipv6 {
 	ipv6addr	= ::1
-	secret		= changeme
+	secret		= <SHARED_SECRET>
 }
 
 # All IPv6 Site-local clients
 #client sitelocal_ipv6 {
 #	ipv6addr	= fe80::/16
-#	secret		= changeme
+#	secret		= <SHARED_SECRET>
 #}
 
 #client example.org {
 #	ipaddr		= radius.example.org
-#	secret		= changeme
+#	secret		= <SHARED_SECRET>
 #}
 
 #
@@ -345,12 +345,12 @@ client localhost_ipv6 {
 #
 #client private-network-1 {
 #	ipaddr		= 192.0.2.0/24
-#	secret		= changeme-1
+#	secret		= <SHARED_SECRET>-1
 #}
 
 #client private-network-2 {
 #	ipaddr		= 198.51.100.0/24
-#	secret		= changeme-2
+#	secret		= <SHARED_SECRET>-2
 #}
 
 #######################################################################
@@ -388,6 +388,6 @@ client localhost_ipv6 {
 #clients per_socket_clients {
 #	client socket_client {
 #		ipaddr = 192.0.2.4
-#		secret = changeme
+#		secret = <SHARED_SECRET>
 #	}
 #}
