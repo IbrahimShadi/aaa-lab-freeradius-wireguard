@@ -1,0 +1,13 @@
+﻿# never commit secrets
+**/*.key
+**/wg0.conf
+**/clients.conf
+**/users
+secrets/
+# keep sanitized samples
+!**/*.example
+
+# editor/system noise
+*.swp
+.DS_Store
+Thumbs.db
